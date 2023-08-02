@@ -16,20 +16,25 @@ docker pull kamilsa/clion-debugger:latest
 
 1. In clion open Settings -> Build, Execution, Deployment -> Toolchains
 2. Click on "+" to add new toolchain and select "Docker"
-![](https://hackmd.io/_uploads/Skd4znDsn.png)
+
+![image](https://github.com/kamilsa/clion-debugger/assets/9370151/406501d5-0d6e-4c4f-9731-4d663a3c5e80)
 
 3. Select `kamilsa/clion-debugger:latest` image
 4. Map volume with your folder containing dump and binary to Docker's folder (for some reason in my case it only worked when both folders had the same paths):
 
-![](https://hackmd.io/_uploads/ryYXmhwjh.png)
+![image](https://github.com/kamilsa/clion-debugger/assets/9370151/997a720d-cd80-4ecb-b2cb-53f64c351385)
+
 
 ## Step 3: open core dump
 
 1. From main menu (on top) select Run -> Open core dump
 2. Select debugger from Docker
-![](https://hackmd.io/_uploads/ryw0Qnwsh.png)
+
+![image](https://github.com/kamilsa/clion-debugger/assets/9370151/18378f32-44c1-41b4-a9a4-b7a36038f141)
+
 3. Select core dump file and symbol file (binary)
 4. Wait few minutes (in my case it took ~5 mins to open core dump from KAGOME crash)
 5. Enjoy debugging
 
-![](https://hackmd.io/_uploads/SkdBLnDs2.png)
+![image](https://github.com/kamilsa/clion-debugger/assets/9370151/4fe71328-2ed8-46b1-bf3d-f82d2799cb6a)
+
