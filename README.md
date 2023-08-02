@@ -8,8 +8,14 @@ Receive binary and core dump of the crash and download it to your local laptop's
 
 ## Step 1: pull docker image for debug
 
+For non-apple-silicon non-Mac:
 ```bash
 docker pull kamilsa/clion-debugger:latest
+```
+
+For Mac on apple-silicon:
+```bash
+docker pull kamilsa/clion-debugger:latest-mac
 ```
 
 ## Step 2: add Docker toolchain to Clion
@@ -33,7 +39,11 @@ docker pull kamilsa/clion-debugger:latest
 ![image](https://github.com/kamilsa/clion-debugger/assets/9370151/18378f32-44c1-41b4-a9a4-b7a36038f141)
 
 3. Select core dump file and symbol file (binary)
-4. Wait few minutes (in my case it took ~5 mins to open core dump from KAGOME crash)
+4. Wait few minutes (in my case it took ~5 mins to open core dump from KAGOME crash). If Clion throws timeout error change timeout to -1 via "shift-shift -> Actions -> Registry -> (type) cidr.debugger.timeout -> set timeout to -1"
+
+![image](https://github.com/kamilsa/clion-debugger/assets/9370151/2c9e6afb-af4f-4032-a2e7-40be7610e678)
+
+
 5. Enjoy debugging
 
 ![image](https://github.com/kamilsa/clion-debugger/assets/9370151/4fe71328-2ed8-46b1-bf3d-f82d2799cb6a)
